@@ -5,7 +5,9 @@ fn binary_search(arr: &[i32], target: i32) -> Option<usize> {
     while low <= top {
         let mid = (low + top) / 2;
         let guess = arr[mid];
-        println!("low: {} mid: {} top: {} guess: {}", low, mid, top, guess);
+        let lowNum = arr[low];
+        let topNum = arr[top];
+        println!("low: [{}-{}] mid: [{}-{}] top: [{}-{}] \nguess: {}", low, lowNum, mid, guess, top, topNum, guess);
 
         if guess == target {
             return Some(mid);
@@ -25,7 +27,7 @@ fn main() {
     let target = 512;
 
     match binary_search(&arr, target) {
-        Some(index) => println!("Found at index {}!", index),
-        None => println!("Item was not found."),
+        Some(index) => println!("Found {} at index {}!", target, index),
+        None => println!("Item {} was not found.", target),
     }
 }
