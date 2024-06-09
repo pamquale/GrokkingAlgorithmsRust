@@ -5,9 +5,9 @@ fn binary_search(arr: &[i32], target: i32) -> Option<usize> {
     while low <= top {
         let mid = (low + top) / 2;
         let guess = arr[mid];
-        let lowNum = arr[low];
-        let topNum = arr[top];
-        println!("low: [{}-{}] mid: [{}-{}] top: [{}-{}] \nguess: {}", low, lowNum, mid, guess, top, topNum, guess);
+        let low_num = arr[low];
+        let top_num = arr[top];
+        println!("low: [{}-{}] mid: [{}-{}] top: [{}-{}] \nguess: {}", low, low_num, mid, guess, top, top_num, guess);
 
         if guess == target {
             return Some(mid);
