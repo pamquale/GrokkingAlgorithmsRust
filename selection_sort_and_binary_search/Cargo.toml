@@ -1,0 +1,6 @@
+[package]
+name = "selection_sort_and_binary_search"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
